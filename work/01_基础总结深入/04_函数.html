@@ -32,6 +32,33 @@
     3. 如果大于60, 输出: 算了吧!
     4. 其它, 输出: 刚好!
   */
+  
+  function printMsg(age) {
+    if(age < 18){
+      console.log('未成年, 再等等!');
+    }else if(age > 60){
+      console.log('算了吧!太老了');
+    }else {
+      console.log('刚好!');
+    }
+  }
+  printMsg(17);
+  printMsg(27);
+  printMsg(67);
+
+
+
+  var obj = {username: 'kobe'};
+
+  var fun = function (msg) {
+    console.log(this.username, msg);
+  }
+
+
+  // fun(); // window
+  fun.call(obj, 'hello call'); //call 强制绑定this，会自动调用当前的函数
+  // apply 强制绑定this，会自动调用当前的函数
+  fun.apply(obj, ['hello apply']);
 </script>
 </body>
 </html>

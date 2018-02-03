@@ -7,7 +7,7 @@
 <body>
 <!--
 1. this是什么?
-  * 一个关键字, 一个内置的引用变量
+  * 一个关键字, 一个内置的引用变量`
   * 在函数中都可以直接使用this
   * this代表调用函数的当前对象
   * 在定义函数时, this还没有确定, 只有在执行时才动态确定(绑定)的
@@ -20,6 +20,32 @@
   * 本质上任何函数在执行时都是通过某个对象调用的
 -->
 <script type="text/javascript">
+
+
+  function fun(name, aeg) {
+    this.name = name;
+    this.aeg = aeg;
+    console.log(this);
+  }
+
+  var obj = {
+    fun: function () {
+      console.log(this);
+    }
+  }
+  fun(); //window
+  obj.fun(); // obj
+  var fn = new fun(); // 实例对象: fn
+
+  // new 操作符都干了那些操作
+  /*
+  * 1. 调用构造函数，生成一个空对象
+  * 2. 将this指向这个空的对象
+  * 3. 执行构造函数里的逻辑
+  * 4. 将执行的结果返回
+  *
+  * */
+
 </script>
 </body>
 </html>

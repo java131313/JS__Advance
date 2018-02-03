@@ -12,8 +12,23 @@
 2. 作用
   * 隐藏内部实现
   * 不污染外部命名空间
+3. 什么时候用立即执行函数？
+  1. 需要某些代码上来就执行
+  2. 内部的数据是私有的
 -->
 <script type="text/javascript">
+//  var username = 'kobe';
+//  console.log(username);
+  (function (window) {
+    var username = 'kobe';
+    console.log(username);
+
+  })(window)
+
+  username = 'wade';
+
+
+
 
 </script>
 
