@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_数据类型</title>
+</head>
+<body>
+<!--
+1. 分类(2大类)
+  * 基本(值)类型
+    * Number: 任意数值
+    * String: 任意文本
+    * Boolean: true/false
+    * undefined: undefined
+    * null: null
+  * 对象(引用)类型
+    * Object: 任意对象
+    * Array: 特别的对象类型(下标/内部数据有序)
+    * Function: 特别的对象类型(可执行)
+2. 判断
+  * typeof:
+    * 可以区别: 数值, 字符串, 布尔值, undefined, function
+    * 不能区别: null与对象, 一般对象与数组
+  * instanceof
+    * 专门用来判断对象数据的类型: Object, Array与Function
+  * ===
+    * 可以判断: undefined和null
+-->
+
+<script type="text/javascript">
+  var str = 'abc';
+  var num = 123;
+  var bool = true;
+  var flag1 = undefined;
+  var flag2 = null;
+  console.log(typeof str);
+  console.log( typeof typeof num);
+  console.log(typeof bool);
+  console.log(typeof flag1, flag1, typeof flag1 == undefined);// 'undefined' == undefined
+  console.log(typeof flag2); //object
+
+  var obj = {};
+  var arr = [];
+  var fun = function () {
+
+  }
+  console.log(typeof obj); // object
+  console.log(typeof arr);  // object
+  console.log(typeof fun); // function
+  
+  console.log(arr instanceof Array); // true
+  console.log(fun instanceof Function); // true
+  console.log(fun instanceof Object); //
+  console.log(arr instanceof Object);  // true
+  console.log(arr instanceof Object);  // true
+
+
+  console.log('abc' === 'bcd'); //false
+  console.log(123 === 234); //false
+  console.log(undefined === undefined); // true
+  console.log(null === null); // true
+
+
+</script>
+</body>
+</html>
