@@ -12,7 +12,17 @@
   var obj2 = {m: 3}
   a[obj1] = 4
   a[obj2] = 5
-  console.log(a[obj1]) // 输出多少?
+  obj1.toString(); //[Object Object]
+  console.log(a[obj1]) // 输出多少? 4 5
+  console.log(a);
+
+  var arr = [1,2];
+  var arr2 = [2, 3];
+  a[arr] = 7;
+  a[arr2] = 9;
+  console.log(arr.toString());
+  console.log(a[arr]);// 9
+  console.log(a);
 </script>
 </body>
 </html>

@@ -26,6 +26,18 @@
 -->
 <script type="text/javascript">
 
+  var obj = {
+    username: 'kobe',
+    age: 40,
+    setName: function (name) {
+      this.username = name;
+    }
+  };
+  console.log(obj.username);
+  obj.setName('wade');
+  console.log(obj.username);
+  console.log(obj['username']);
+
 </script>
 </body>
 </html>
