@@ -11,6 +11,34 @@
 2. 将函数作为实参传递给另一个函数调用
 -->
 <script type="text/javascript">
+  // 1. 将函数作为另一个函数的返回值
+
+  function fun() {
+    var a = 'abc';
+    function fun2() {
+      console.log(a);
+    }
+
+    return fun2;
+  }
+
+  var fun2 = fun();
+  fun2();
+
+  //将函数作为实参传递给另一个函数调用
+  function fun3(f) {
+    var a = 'abc'
+    f(a);
+  }
+
+  function fun4(a) {
+    console.log(a);
+  }
+
+  fun3(fun4);
+
+
+
 </script>
 </body>
 </html>
