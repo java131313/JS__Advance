@@ -28,7 +28,7 @@
   var object2 = {
     name2: "My Object",
     getNameFunc: function () {
-      var that = this;
+      var that = this;  // 临时保存this对象
       return function () {
         return that.name2;
       };
