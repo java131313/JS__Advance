@@ -12,7 +12,38 @@
 2. Function是通过new自己产生的实例
 -->
 <script type="text/javascript">
+  function Foo() {  }
+  var f1 = new Foo();
 
+
+  Function() // 函数对象
+  // Foo 来源于Function
+
+  var f2 = new Function();
+
+
+
+
+
+
+
+
+
+  console.log(f1 instanceof Foo); // true
+  console.log(f1 instanceof Object); // true
+
+  //案例2
+  console.log(Object instanceof Function)  // true
+  console.log(Object instanceof Object)  // true
+  console.log(Function instanceof Object) // true
+  console.log(Function instanceof Function) //true
+  function Foo() {}
+  console.log(Object instanceof  Foo); // false
+  
+  
+  console.log(Function.prototype.__proto__ == Object.prototype);
+  console.log(Function.prototype);
+  console.log(new Object());
 </script>
 </body>
 </html>

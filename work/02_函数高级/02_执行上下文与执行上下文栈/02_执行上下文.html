@@ -28,6 +28,18 @@
 -->
 <script type="text/javascript">
 
+  debugger;
+  console.log(this);
+  var a = 'abc';
+  function fun() {
+    debugger
+    console.log('fun()');
+    var a = 'abc';
+    function fun2() {
+
+    }
+  }
+  fun();
 </script>
 </body>
 </html>

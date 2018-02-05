@@ -17,6 +17,26 @@
 3. 构造函数/原型/实体对象的关系2(图解)
 -->
 <script type="text/javascript">
+  console.log(Object);
+  var obj = new Object()
+  console.log(obj);
+
+  console.log(Object.prototype);
+  function Fn() {
+    this.test1 = function () {
+      console.log('test1()')
+    }
+  }
+  console.log(Fn.prototype);
+  Fn.prototype.test2 = function () {
+    console.log('test2()')
+  }
+  var fn = new Fn()
+  console.log(fn);
+  fn.test1() // 调用
+  fn.test2() // 调用
+  console.log(fn.toString()) // 调用
+  fn.test3() // 报错
 </script>
 </body>
 </html>

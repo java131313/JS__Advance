@@ -6,7 +6,7 @@
 </head>
 <body>
 <!--
-1. 变量声明提升
+1. 变量声明提升  (js引擎的预解析过程)
   * 通过var定义(声明)的变量, 在定义语句之前就可以访问到
   * 值: undefined
 2. 函数声明提升
@@ -15,6 +15,13 @@
 3. 问题: 变量提升和函数提升是如何产生的?
 -->
 <script type="text/javascript">
+  debugger;
+  console.log(window);
+  var a = 'abc';
+  fun();
+  var fun = function () {
+
+  }
 
 </script>
 </body>

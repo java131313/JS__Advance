@@ -13,6 +13,22 @@
   * 作用: 函数的所有实例对象自动拥有原型中的属性(方法)
 -->
 <script type="text/javascript">
+  console.log(Object);
+  var obj = new Object()
+  function Fn() {
+    
+  }
+  console.log(Fn.prototype, Date.prototype);
+  console.log(Fn.prototype.constructor == Fn);
+  Fn.prototype.test = function () {
+    console.log('test()');
+  };
+  Fn.prototype.username = 'kobe'
+  // Fn.prototype.test();
+  var fn = new Fn();
+  fn.test();
+  var fn2 = new Fn();
+  fn2.test();
 
 </script>
 </body>
