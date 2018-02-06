@@ -7,6 +7,7 @@
 <body>
 
 <button id="btn">启动定时器</button>
+<input type="text">
 
 <!--
 1. 定时器真是定时执行的吗?
@@ -18,6 +19,18 @@
   * 事件循环模型(后面讲)
 -->
 <script type="text/javascript">
+  document.getElementById('btn').onclick = function () {
+    var time = Date.now();
+    setTimeout(function () {
+      console.log('spend time: ', Date.now() - time);
+    }, 200)
+
+    for (var i = 0; i < 1000000000000; i++) {
+
+    }
+    
+  }
+  
 </script>
 </body>
 </html>

@@ -5,6 +5,7 @@
   <title>04_JS是单线程的</title>
 </head>
 <body>
+<button id="btn">按钮</button>
 <!--
 1. 如何证明js执行是单线程的?
   * setTimeout()的回调函数是在主线程执行的
@@ -25,6 +26,15 @@
   * 后面在某个时刻才会执行回调代码
 -->
 <script type="text/javascript">
+  console.log('aaa');
+  setTimeout(function () {
+    console.log('xxx');
+  }, 200)
+  alert('aaa');
+  document.getElementById('btn').onclick = function () {
+    console.log('aa');
+  }
+  
 </script>
 </body>
 </html>
