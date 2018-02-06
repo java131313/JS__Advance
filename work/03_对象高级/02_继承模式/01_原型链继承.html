@@ -20,6 +20,30 @@
 -->
 <script type="text/javascript">
 
+  function Person(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  Person.prototype.setName = function (name) {
+    this.name = name;
+  };
+
+  var person = new Person('curry', 30);
+  console.log(Person.prototype.constructor === Person);
+  console.log(person);
+  //person.setName();
+  function ChildPerson(name, age, sex) {
+    this.name = name;
+    this.age = age;
+    this.sex = sex;
+  }
+
+  ChildPerson.prototype = new Person();
+  ChildPerson.prototype.constructor = ChildPerson;
+  var child = new ChildPerson('kobe', 40, '男')
+  child.setName('wade')
+  console.log(child)
 </script>
 </body>
 </html>

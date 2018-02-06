@@ -12,6 +12,20 @@
   * 问题: 对象没有一个具体的类型, 都是Object类型
 -->
 <script type="text/javascript">
+  function createPerson(name, age) {
+    return {
+      name: name,
+      age: age
+    }
+  }
+  var person1 = createPerson('kobe', 40);
+  var person2 = createPerson('wade', 37);
+  var person3 = createPerson('curry', 30);
+  var wangcai = createPerson('wangcai', 3)
+
+  console.log(person1 instanceof createPerson); //
+  
+  console.log(person1, person2, person3);
 </script>
 </body>
 </html>

@@ -28,13 +28,42 @@
   var object2 = {
     name2: "My Object",
     getNameFunc: function () {
-      var that = this;  // 临时保存this对象
+      console.log(this);
+      console.log(this == object2);
+      var that = object2;
       return function () {
-        return that.name2;
+        return object2.name;
       };
+
     }
   };
   console.log(object2.getNameFunc()()); //?
+
+
+
+
+
+
+
+
+
+
+
+
+  function b() {
+    a=function () {
+      alert("这是1")
+    }
+  }
+  c=function () {
+    alert('这是2')
+  }
+  console.log(c)/*打印出函数c*/
+  console.log(a)/*第一次报错，a is not defined（既然没有var a，a是全局变量为啥会报错）*/
+
+  b();
+  console.log(a)/*调用后打印出函数a*/
+
 </script>
 </body>
 </html>
